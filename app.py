@@ -60,7 +60,5 @@ def run():
 
     btn.click(calculate, inputs=[image_in, audio_in], outputs=[video_out])
     block.queue()
-    block.launch(server_name="0.0.0.0", server_port=7860)
+    block.launch(debug=True, max_threads=True, share=True, inbrowser=True)
 
-if __name__ == "__main__":
-    run()
